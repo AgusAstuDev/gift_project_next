@@ -57,3 +57,10 @@
     transform: translateY(6px);
   }
 }
+
+@media (min-width: 800px) {
+  .heroContainer {
+    gap: 10px;
+    padding: 0px 40px;
+  }
+}
