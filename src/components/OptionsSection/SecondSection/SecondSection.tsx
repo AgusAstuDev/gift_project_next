@@ -8,26 +8,39 @@ export default function SecondSection() {
     <div id="second-section" className={style.secondSectionContainer}>
       <ArrowsScrollButton option="up" targetId="first-section" />
       <p>
-        Ahora viene la parte divertida: quiero que armes tu propio regalo 💝.
-        Primero elegí el finde que más te guste, y después vamos a elegir juntos
-        el lugar perfecto para disfrutarlo.
+        <strong>💖 ¡Perfecto! 💖</strong>
       </p>
       <div>
+        <p>Ahora contame…</p>
+        <p>
+          ¿Qué plan te tienta más para disfrutar el <strong>{gift.date}</strong>
+          ?
+        </p>
+      </div>
+      <div className={style.optionsContainer}>
         <label>
           <input
             type="checkbox"
-            checked={gift.place === "Lugar 1"}
-            onChange={() => setPlace("Lugar 1")}
+            checked={gift.place === "Cabaña"}
+            onChange={() => setPlace("Cabaña")}
           />
-          Lugar 1
+          Cabaña 🏡
         </label>
         <label>
           <input
             type="checkbox"
-            checked={gift.place === "Lugar 2"}
-            onChange={() => setPlace("Lugar 2")}
+            checked={gift.place === "Bodega"}
+            onChange={() => setPlace("Bodega")}
           />
-          Lugar 2
+          Bodega 🍷
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={gift.place === "Hotel"}
+            onChange={() => setPlace("Hotel")}
+          />
+          Hotel 🏨
         </label>
       </div>
       <div className={gift.place ? "fadeIn" : "fadeOut"}>

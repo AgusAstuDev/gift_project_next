@@ -1,17 +1,25 @@
 "use client";
 
-import { createContext, useContext, useState, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
 
 type GiftData = {
   date: string;
   place: string;
   message: string;
+  note: string;
 };
 
 type GiftContextType = {
   gift: GiftData;
   setDate: (date: string) => void;
   setPlace: (place: string) => void;
+  setNote: (note: string) => void;
 };
 
 const GiftContext = createContext<GiftContextType | undefined>(undefined);
@@ -20,8 +28,13 @@ export function GiftProvider({ children }: { children: ReactNode }) {
   const [gift, setGift] = useState<GiftData>({
     date: "",
     place: "",
+    note: "",
     message: "",
   });
+
+  useEffect(() => {
+    document.body.classList.add("loaded");
+  }, []);
 
   const setDate = (date: string) => {
     setGift((prev) => ({
@@ -39,8 +52,18 @@ export function GiftProvider({ children }: { children: ReactNode }) {
     }));
   };
 
+  const setNote = (note: string) => {
+    setGift((prev) => ({
+      ...prev,
+      note,
+      message: `Hola bebé 💖 Quiero ir a ${prev.place || "___"} el ${
+        prev.date || "___"
+      }. ${note}`,
+    }));
+  };
+
   return (
-    <GiftContext.Provider value={{ gift, setDate, setPlace }}>
+    <GiftContext.Provider value={{ gift, setDate, setPlace, setNote }}>
       {children}
     </GiftContext.Provider>
   );

@@ -1,0 +1,33 @@
+.thirdSectionContainer {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1.8vh;
+  padding: 0px 20px;
+}
+
+.summaryContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3vh;
+}
+
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8vh;
+  width: 100%;
+  max-width: 400px;
+}
+
+.optionsContainer textarea {
+  height: 100px;
+  width: 300px;
+  padding: 10px;
+}
