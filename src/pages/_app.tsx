@@ -1,6 +1,23 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import { Dancing_Script, Delius_Swash_Caps } from "next/font/google";
+
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-dancing-script",
+});
+
+const deliusSwashCaps = Delius_Swash_Caps({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-delius-swash-caps",
+});
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <main className={`${dancingScript.variable} ${deliusSwashCaps.variable}`}>
+      <Component {...pageProps} />
+    </main>
+  );
 }
