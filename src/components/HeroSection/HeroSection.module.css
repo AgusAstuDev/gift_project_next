@@ -10,7 +10,7 @@
 }
 
 .heroContainer h1 {
-  font-size: 48px;
+  font-size: 40px;
   color: #333;
   text-wrap: balance;
   text-align: center;
@@ -20,6 +20,12 @@
   font-size: 20px;
   text-align: center;
   max-width: 600px;
+}
+
+@media (min-width: 424px) {
+  .heroContainer h1 {
+    font-size: 48px;
+  }
 }
 
 @media (min-width: 800px) {

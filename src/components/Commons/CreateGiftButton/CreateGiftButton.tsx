@@ -9,10 +9,14 @@ export default function CreateGiftButton() {
   useEffect(() => {
     const createMessage = () => {
       let message = `Hola bebé 💖\n\n`;
-      message += `✨ Tenemos plan para el finde *${gift.date || "___"}* ✨\n`;
-      message += `📍 Lugar: ${gift.place || "___"}\n`;
+      message += `✨ Ye tengo decidido el plan para mi cumpleaños, que lo celebraremos el finde *${
+        gift.date || "___"
+      }*\n`;
+      message += `📍 El lugar en el que quiero compartir es: ${
+        gift.place || "___"
+      }\n`;
       if (gift.note !== "") {
-        message += `📝 Mensaje: "${gift.note}"\n`;
+        message += `📝 Nota para que tengas en cuenta: "${gift.note}"\n`;
       }
       message += `\n¡No puedo esperar a disfrutarlo con vos! 🥰`;
       return encodeURIComponent(message);
