@@ -8,11 +8,11 @@ import style from "./SwiperAlbumCards.module.css";
 
 import Image from "next/image";
 
-import image1 from "../../../public/images/album/IMG_0414.webp";
-import image2 from "../../../public/images/album/IMG_0430.webp";
-import image3 from "../../../public/images/album/IMG_0634.webp";
-import image4 from "../../../public/images/album/IMG_0646.webp";
-import image5 from "../../../public/images/album/IMG_0680.webp";
+import image1 from "@/../public/images/album/IMG_0414.webp";
+import image2 from "@/../public/images/album/IMG_0430.webp";
+import image3 from "@/../public/images/album/IMG_0634.webp";
+import image4 from "@/../public/images/album/IMG_0646.webp";
+import image5 from "@/../public/images/album/IMG_0680.webp";
 
 const images = [
   { src: image1, alt: "Imagen 1" },
@@ -31,9 +31,12 @@ export default function SwiperAlbumCards() {
         modules={[Autoplay, EffectCards]}
         className="mySwiper"
         autoplay={{
-          delay: 3500,
+          delay: 5000,
           disableOnInteraction: true,
+          stopOnLastSlide: true,
         }}
+        cardsEffect={{ perSlideOffset: 15 }}
+        speed={800}
       >
         {images.map((img, idx) => (
           <SwiperSlide key={idx}>
@@ -41,7 +44,9 @@ export default function SwiperAlbumCards() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <p>❤️ Cada foto es un pedacito de nuestra historia ❤️</p>
+      <p style={{ fontSize: "15px" }}>
+        ❤️ Cada foto es un pedacito de nuestra historia ❤️
+      </p>
     </section>
   );
 }

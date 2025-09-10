@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import { GiftProvider } from "@/context/GiftContext";
 import { Dancing_Script, Delius_Swash_Caps } from "next/font/google";
 
 const dancingScript = Dancing_Script({
@@ -17,7 +18,9 @@ const deliusSwashCaps = Delius_Swash_Caps({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={`${dancingScript.variable} ${deliusSwashCaps.variable}`}>
-      <Component {...pageProps} />
+      <GiftProvider>
+        <Component {...pageProps} />
+      </GiftProvider>
     </main>
   );
 }

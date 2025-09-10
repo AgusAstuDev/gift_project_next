@@ -1,11 +1,11 @@
 .heroContainer {
   width: 100%;
-  height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-evenly;
+  gap: 1.8vh;
   padding: 0px 20px;
 }
 
@@ -20,42 +20,6 @@
   font-size: 20px;
   text-align: center;
   max-width: 600px;
-}
-
-.downArrow {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  cursor: pointer;
-  background: #ffffff;
-  border-radius: 50px;
-  padding: 0px 10px 5px 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-  transition: box-shadow 0.2s, border-color 0.2s;
-}
-
-.downArrow:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  border-color: #bdbdbd;
-}
-
-.downArrow svg {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  animation: bounce 2.8s infinite;
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(6px);
-  }
 }
 
 @media (min-width: 800px) {
