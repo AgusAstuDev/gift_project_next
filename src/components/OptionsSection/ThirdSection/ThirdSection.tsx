@@ -1,5 +1,4 @@
 import ArrowsScrollButton from "@/components/Commons/ArrowsScrollButton/ArrowsScrollButton";
-import CreateGiftButton from "@/components/Commons/CreateGiftButton/CreateGiftButton";
 import style from "./ThirdSection.module.css";
 import { useGift } from "@/context/GiftContext";
 
@@ -54,7 +53,7 @@ export default function ThirdSection() {
           onChange={(e) => setNote(e.target.value)}
         />
       </div>
-      <CreateGiftButton />
+      <ArrowsScrollButton option="down" targetId="fourth-section" />
     </div>
   );
 }

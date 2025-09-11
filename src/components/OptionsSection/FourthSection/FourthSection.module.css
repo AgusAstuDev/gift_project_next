@@ -1,19 +1,35 @@
-.firstSectionContainer {
+.FourthSectionContainer {
   width: 100%;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 1.8vh;
+  justify-content: center;
+  gap: 140px;
   padding: 0px 20px;
 }
+
+.summaryContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
 .optionsContainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 1.5vh;
+  align-items: center;
+  gap: 1.8vh;
+  width: 100%;
+  max-width: 400px;
+}
+
+.optionsContainer textarea {
+  height: 100px;
+  width: 300px;
+  padding: 10px;
 }
 
 .titleContainer {
@@ -25,7 +41,7 @@
 }
 
 .containerImage {
-  width: 30%;
+  width: 50%;
   max-width: 100px;
   height: auto;
 }
@@ -34,15 +50,4 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-}
-
-.optionsContainer label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.optionsContainer input {
-  margin-top: 3px;
 }

@@ -22,7 +22,7 @@ export default function CreateGiftButton() {
       return encodeURIComponent(message);
     };
 
-    const phoneNumber = "542615582331"; // tu número con código de país
+    const phoneNumber = "542615582331";
     setWaUrl(`https://wa.me/${phoneNumber}?text=${createMessage()}`);
   }, [gift]);
 
@@ -33,7 +33,7 @@ export default function CreateGiftButton() {
       rel="noopener noreferrer"
       className={style.giftButton}
     >
-      💌 Crear regalo 💌
+      💌 Reclamar 💌
     </a>
   );
 }
