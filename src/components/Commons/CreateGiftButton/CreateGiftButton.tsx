@@ -24,7 +24,7 @@ export default function CreateGiftButton() {
       if (gift.note !== "") {
         message += `📝 Nota para que tengas en cuenta: "${gift.note}"\n\n`;
       }
-      message += `\n¡No puedo esperar a disfrutarlo con vos! 🥰`;
+      message += `¡No puedo esperar a disfrutarlo con vos! 🥰`;
       return encodeURIComponent(message);
     };
 
